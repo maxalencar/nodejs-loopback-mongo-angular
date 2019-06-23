@@ -1,4 +1,4 @@
-# Simple CRUD Microservices using Angular 8, Loopback 4 and Mongo
+# Simple Microservices using Angular 8, Loopback 4 and Mongo
 
 ## Prerequisite
 
