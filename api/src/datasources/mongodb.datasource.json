@@ -1,0 +1,11 @@
+{
+  "name": "mongodb",
+  "connector": "mongodb",
+  "url": "mongodb://mongodb:27017/trade",
+  "host": "mongodb",
+  "port": 27017,
+  "user": "",
+  "password": "",
+  "database": "trade",
+  "useNewUrlParser": true
+}
