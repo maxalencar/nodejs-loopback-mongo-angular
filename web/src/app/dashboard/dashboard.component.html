@@ -1,61 +1,65 @@
-<mat-table [dataSource]="trades" class="mat-elevation-z8">
-  <!--- Note that these columns can be defined in any order.
-        The actual rendered columns are set as a property on the row definition" -->
+<div class="mat-elevation-z8">
+  <mat-table matSort [dataSource]="dataSource">
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
 
-  <!-- Product Column -->
-  <ng-container matColumnDef="product">
-    <mat-header-cell *matHeaderCellDef> Product </mat-header-cell>
-    <mat-cell *matCellDef="let trade"> {{ trade.product }} </mat-cell>
-  </ng-container>
+    <!-- Product Column -->
+    <ng-container matColumnDef="product">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Product </mat-header-cell>
+      <mat-cell *matCellDef="let trade"> {{ trade.product }} </mat-cell>
+    </ng-container>
 
-  <!-- Order Type Column -->
-  <ng-container matColumnDef="orderType">
-    <mat-header-cell *matHeaderCellDef> Order Type </mat-header-cell>
-    <mat-cell *matCellDef="let trade"> {{ trade.orderType }} </mat-cell>
-  </ng-container>
+    <!-- Order Type Column -->
+    <ng-container matColumnDef="orderType">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Order Type </mat-header-cell>
+      <mat-cell *matCellDef="let trade"> {{ trade.orderType }} </mat-cell>
+    </ng-container>
 
-  <!-- Opening Price Column -->
-  <ng-container matColumnDef="openingPrice">
-    <mat-header-cell *matHeaderCellDef> Opening Price </mat-header-cell>
-    <mat-cell *matCellDef="let trade"> {{ trade.openingPrice }} </mat-cell>
-  </ng-container>
+    <!-- Opening Price Column -->
+    <ng-container matColumnDef="openingPrice">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Opening Price </mat-header-cell>
+      <mat-cell *matCellDef="let trade"> {{ trade.openingPrice }} </mat-cell>
+    </ng-container>
 
-  <!-- Opening Date Time Column -->
-  <ng-container matColumnDef="openingDateTime">
-    <mat-header-cell *matHeaderCellDef> Opening Date Time </mat-header-cell>
-    <mat-cell *matCellDef="let trade"> {{trade.openingDateTime | date }} </mat-cell>
-  </ng-container>
+    <!-- Opening Date Time Column -->
+    <ng-container matColumnDef="openingDateTime">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Opening Date Time </mat-header-cell>
+      <mat-cell *matCellDef="let trade"> {{trade.openingDateTime | date }} </mat-cell>
+    </ng-container>
 
-  <!-- Closing Price Column -->
-  <ng-container matColumnDef="closingPrice">
-    <mat-header-cell *matHeaderCellDef> Closing Price </mat-header-cell>
-    <mat-cell *matCellDef="let trade"> {{ trade.closingPrice }} </mat-cell>
-  </ng-container>
+    <!-- Closing Price Column -->
+    <ng-container matColumnDef="closingPrice">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Closing Price </mat-header-cell>
+      <mat-cell *matCellDef="let trade"> {{ trade.closingPrice }} </mat-cell>
+    </ng-container>
 
-  <!-- Closing Date Time Column -->
-  <ng-container matColumnDef="closingDateTime">
-    <mat-header-cell *matHeaderCellDef> Closing Date Time </mat-header-cell>
-    <mat-cell *matCellDef="let trade"> {{ trade.closingDateTime | date }} </mat-cell>
-  </ng-container>
+    <!-- Closing Date Time Column -->
+    <ng-container matColumnDef="closingDateTime">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Closing Date Time </mat-header-cell>
+      <mat-cell *matCellDef="let trade"> {{ trade.closingDateTime | date }} </mat-cell>
+    </ng-container>
 
-  <!--Currency Column -->
-  <ng-container matColumnDef="currency">
-    <mat-header-cell *matHeaderCellDef> Currency </mat-header-cell>
-    <mat-cell *matCellDef="let trade"> {{ trade.currency }} </mat-cell>
-  </ng-container>
+    <!--Currency Column -->
+    <ng-container matColumnDef="currency">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Currency </mat-header-cell>
+      <mat-cell *matCellDef="let trade"> {{ trade.currency }} </mat-cell>
+    </ng-container>
 
-  <!-- Size Column -->
-  <ng-container matColumnDef="size">
-    <mat-header-cell *matHeaderCellDef> Size </mat-header-cell>
-    <mat-cell *matCellDef="let trade"> {{ trade.size }} </mat-cell>
-  </ng-container>
+    <!-- Size Column -->
+    <ng-container matColumnDef="size">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Size </mat-header-cell>
+      <mat-cell *matCellDef="let trade"> {{ trade.size }} </mat-cell>
+    </ng-container>
 
-  <!-- Profit / Loss Column -->
-  <ng-container matColumnDef="profitLoss">
-    <mat-header-cell *matHeaderCellDef> Profit / Loss </mat-header-cell>
-    <mat-cell *matCellDef="let trade"> {{ trade.profitLoss }} </mat-cell>
-  </ng-container>
+    <!-- Profit / Loss Column -->
+    <ng-container matColumnDef="profitLoss">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Profit / Loss </mat-header-cell>
+      <mat-cell *matCellDef="let trade"> {{ trade.profitLoss }} </mat-cell>
+    </ng-container>
 
-  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-</mat-table>
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" showFirstLastButtons></mat-paginator>
+</div>
