@@ -1,4 +1,4 @@
-# Simple Microservices using Angular 8, Loopback 4, Loopback 3 (Active) and Mongo
+# Simple Microservices using Angular 8, Loopback 4, Loopback 3 (Active) and MongoDB
 
 ## Prerequisite
 
