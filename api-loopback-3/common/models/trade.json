@@ -1,0 +1,55 @@
+{
+  "name": "trade",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "required": true
+    },
+    "product": {
+      "type": "string",
+      "required": true
+    },
+    "orderType": {
+      "type": "string",
+      "required": true
+    },
+    "openingPrice": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "openingDateTime": {
+      "type": "date",
+      "required": true
+    },
+    "closingPrice": {
+      "type": "number",
+      "default": 0
+    },
+    "closingDateTime": {
+      "type": "date"
+    },
+    "currency": {
+      "type": "string",
+      "required": true,
+      "default": "eur"
+    },
+    "size": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "profitLoss": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
