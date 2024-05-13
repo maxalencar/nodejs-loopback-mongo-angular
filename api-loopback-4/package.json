@@ -52,7 +52,7 @@
     "@loopback/openapi-v3": "^1.6.4",
     "@loopback/repository": "^1.8.1",
     "@loopback/rest": "^1.16.2",
-    "@loopback/rest-explorer": "^1.2.4",
+    "@loopback/rest-explorer": "^1.4.10",
     "@loopback/service-proxy": "^1.2.4",
     "loopback-connector-mongodb": "^4.2.0"
   },
